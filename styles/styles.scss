@@ -1,0 +1,84 @@
+@import "./util";
+
+body{
+    background:linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(105, 1, 62, 0.747)), url("../images/bg.jpg");    
+    height: 100vh;
+    flex-direction: column;
+    margin: 0;
+    color: white;
+    font-family: 'Catamaran', sans-serif;
+    overflow: hidden;
+}
+nav{
+    background-color: #945589;
+    
+    width: 100%;
+    @include flexIt(row, space-evenly);
+    a{
+        color: #ffffff;
+        text-decoration: none;
+    }
+    a:hover,a:focus{
+        opacity: 0.5;
+    }
+}
+main{
+    width: 100%;
+    margin: 10em auto;
+}
+.card{
+    width: 100%;
+    max-width: 700px;
+    border-radius: 10px;
+    margin: 0 auto;
+    
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.219);
+    @include flexIt(column,center);
+    button{
+        background-color: transparent;
+        border: none;
+    }
+    img{
+        width: 50px;
+        margin: 0 auto;
+        opacity: 0.7;
+        padding-bottom: 1em;
+    }
+    button:hover,button:focus,img:hover,img:focus{
+        cursor: pointer;
+        opacity: 1;
+    }
+
+    .scrollable{
+        text-align: center;
+        padding: 0 1em 0 0;
+        width: 80%;
+        height: 200px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        scrollbar-width: thin;
+        scrollbar-color: #883676 rgb(15, 13, 15) ;
+        li{
+            padding: 1em;
+            transition: all 1s 1s;
+            list-style-type: none;
+        }
+    }
+}
+footer{
+    width: 50%;
+    display: block;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    margin: 0;
+    a{
+        text-decoration: none;
+        color: white;
+        padding: 0 1em;
+        
+    }
+    p{
+        display: inline;
+    }
+}
